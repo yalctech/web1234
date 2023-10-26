@@ -11,57 +11,63 @@
 </head>
 
 <body>
-    <h1>
-        Cake Recipe
-    </h1>
-    <a href="https://video.cookist.com/video/an/WeB6E-SwEXHsJD_8">
-        <img src="https://bakingfanatic.files.wordpress.com/2015/08/raspberry-mousse-domes-4.jpg">
-    </a>
-    <h2>
-        Birthday Cake
-    </h2>
-    <h3>
-        Ingredient
-    </h3>
-    <ul class="listfeature">
-        <li>
-            <div>
-                <div>Flour</div>
-                <div>200 g</div>
-            </div>
-        </li>
-        <li>
-            <div>
-                <div>Egg</div>
-                <div>3</div>
-            </div>
-        </li>
-        <li>
-            <div>
-                <div>Sugar</div>
-                <div>100 g</div>
-            </div>
-        </li>
-        <li>
-            <div>
-                <div>Chocolate</div>
-                <div>100 g</div>
-            </div>
-        </li>
-    </ul>
-    <h3>
-        Instructions
-    </h3>
-    <ol class="listfeature">
-        <li>Mix flour and egg. Whisk.</li>
-        <li>Mix sugar and chocolate. Whisk</li>
-        <li>Heat oven until 300c</li>
-        <li>Spread the mix into baking tray</li>
-        <li>Wait until done</li>
-    </ol>
+    <div>
+        <h1>
+            Cake Recipe
+        </h1>
+    </div>
+    <div class="content">
+        <a href="https://video.cookist.com/video/an/WeB6E-SwEXHsJD_8">
+            <img src="https://bakingfanatic.files.wordpress.com/2015/08/raspberry-mousse-domes-4.jpg">
+        </a>
+        <div class="text">
+            <h2>
+                Birthday Cake
+            </h2>
+            <h3>
+                Ingredient
+            </h3>
+            <ul class="listfeature">
+                <li>
+                    <div>
+                        <div>Flour</div>
+                        <div>200 g</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>Egg</div>
+                        <div>3</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>Sugar</div>
+                        <div>100 g</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>Chocolate</div>
+                        <div>100 g</div>
+                    </div>
+                </li>
+            </ul>
+            <h3>
+                Instructions
+            </h3>
+            <ol class="listfeature">
+                <li>Mix flour and egg. Whisk.</li>
+                <li>Mix sugar and chocolate. Whisk</li>
+                <li>Heat oven until 300c</li>
+                <li>Spread the mix into baking tray</li>
+                <li>Wait until done</li>
+            </ol>
+        </div>
+    </div>
 </body>
 
-<style> 
+<style>
     *,
     html,
     body {
@@ -105,5 +111,29 @@
 
     ol {
         margin-bottom: 16px;
+    }
+
+    div.content,
+    div.text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    @media only screen and (min-width: 600px) {
+        img {
+            object-fit: cover;
+            width: 50vw;
+            flex: 1;
+        }
+
+        div.content {
+            flex-direction: row;
+            width: 108vw;
+        }
+
+        div.text {
+            flex: 1;
+        }
     }
 </style>
